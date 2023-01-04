@@ -17,12 +17,4 @@
       <td>множество допустимых значений атрибута
  </table>
        
-       
- файлы репозитория
- 
- <table>
-  <tr><td>READMI.md
-      <td>Basis SQL.md
-      <td>Book_requests.sql - 
-       перечень заданий и решений по таблице book
- </table>
+
