@@ -26,19 +26,15 @@ VALUES ('Лирика', 'Пастернак Б.Л.',518.99 ,2),
 -- Добавление записей из другой таблицы
 
 -- Занести все книги из таблицы supply в таблицу book.
-
 INSERT INTO supply (title, author, price, amount)
 SELECT title, author, price, amount 
 FROM book;
 
 -- Добавить из таблицы supply в таблицу book, все книги, кроме книг, написанных Булгаковым М.А. и Достоевским Ф.М.
-INSERT INTO supply (title, author, price, amount)
-SELECT title, author, price, amount 
-FROM book
-WHERE author <> ALL('Булгаков М.А.', 'Достоевский Ф.М.');
-
-SELECT *
-FROM supply;
+INSERT INTO book(title, author, price,amount)
+SELECT title, author, price,amount
+FROM supply
+WHERE author NOT IN ('Достоевский Ф.М.', 'Булгаков М.А.');
 
 
 
